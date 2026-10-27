@@ -24,7 +24,7 @@ It does not use Microsoft Graph, EWS SOAP or a browser. Every tool call is a pla
 ### From GitHub (with the GitHub CLI)
 
 ```sh
-gh repo clone <owner>/outlook-mcp
+gh repo clone uukelele/outlook-mcp
 cd outlook-mcp
 npm install
 npm run build
