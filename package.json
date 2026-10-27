@@ -1,0 +1,44 @@
+{
+  "name": "outlook-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Microsoft 365 Outlook mail, calendar and contacts via the Outlook on the web (OWA) service API",
+  "type": "module",
+  "bin": {
+    "outlook-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "docs"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "start": "node dist/index.js",
+    "check": "node dist/index.js --check",
+    "test": "vitest run",
+    "test:live": "cross-env OUTLOOK_LIVE_TESTS=1 vitest run tests/live.test.ts"
+  },
+  "keywords": [
+    "mcp",
+    "outlook",
+    "owa",
+    "exchange",
+    "microsoft-365"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "cross-env": "^10.1.0",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}
